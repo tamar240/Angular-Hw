@@ -1,0 +1,17 @@
+
+<div id="list" >
+  @for(course of courses;track course.id){
+    <p ColorCourse  [btnColor]="colorArr[i]"  (click)="addToSelected(course)" >{{ course.name }} - {{ course.subject }}</p>
+      {{plusI()}}
+  }
+</div>
+
+
+
+<p>Selected Options:</p>
+
+  @for(c of selectedOptions;track c){
+  <p >
+    {{ c.name }} - {{ c.subject }}
+  </p> 
+}

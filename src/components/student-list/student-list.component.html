@@ -1,0 +1,31 @@
+<ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+@for(std of students; track std){
+  <li>
+   {{std.Id}} {{std.firstName}} {{std.lastName}}
+  </li>
+ 
+ <button (click)="update(std)">עריכה</button>
+ <button (click)="deleted(std)">מחיקה</button>
+
+ @if (std.isPay) {
+     <app-courses-list></app-courses-list>
+  }
+ @if(std.flag){
+ <app-student-detailes [stud]="std">
+  <!-- <input type="radio" name="green" value="green"> green -->
+ </app-student-detailes>}
+}
+<ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+
+<br>
+<br>
+<button (click)="turnOnButton()">add student</button>
+<br>
+@if(buttonAdd){
+ <app-add-student (saveStudent)="parentSave($event)"></app-add-student>
+}
+<app-ifromation></app-ifromation>
+
+<ng-template #myTemplate>
+  <h2>-------------רשימת התלמידות--------------</h2>
+</ng-template>

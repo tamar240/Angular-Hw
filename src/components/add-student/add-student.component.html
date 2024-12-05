@@ -1,0 +1,5 @@
+<input #Id type="number" placeholder="id" min="1" >
+<input #firstName type="text" placeholder="firstName">
+<input #lastName type="text" placeholder="lastName">
+
+<button (click)="childSave(Id.value,firstName.value,lastName.value)">save</button>
