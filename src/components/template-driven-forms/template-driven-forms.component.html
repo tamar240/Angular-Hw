@@ -8,12 +8,12 @@
     <label for="classes">Classes:</label>
     <input id="classes" [(ngModel)]="teacher.classes" name="classes">
 
-    <button type="submit">Add Teacher</button>
+    <button type="submit">Add/Updatr Teacher</button>
 </form>
 
 <div style="font-weight: bolder;">
     teachers list:</div>
-    <div style="border: 2px solid palevioletred; width: fit-content; padding: 5px;">
+    <div style="border: 2px solid rgb(237, 140, 172); width: fit-content; padding: 5px;">
 @for (t of this.teachers; track t) {
     {{t.id}}  {{t.name}}  {{t.classes}}
     <div></div>

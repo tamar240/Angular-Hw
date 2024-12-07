@@ -3,12 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { StudentListComponent } from '../components/student-list/student-list.component';
 import { CoursesListComponent } from "../components/courses-list/courses-list.component";
 import { TemplateDrivenFormsComponent } from "../components/template-driven-forms/template-driven-forms.component";
+import { IconsPipesPipe } from '../pipes/icons-pipes.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   // RouterOutlet
-  imports: [StudentListComponent, StudentListComponent, CoursesListComponent, TemplateDrivenFormsComponent],
+  imports: [StudentListComponent, StudentListComponent, CoursesListComponent, TemplateDrivenFormsComponent,IconsPipesPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
