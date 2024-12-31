@@ -1,14 +1,14 @@
-<form  (ngSubmit)="addTeacher()">
+<form #myForm="ngForm" (ngSubmit)="addTeacher()">
     <label for="id">Code:</label>
-    <input id="id" [(ngModel)]="teacher.id" name="id">
+    <input id="id" [(ngModel)]="teacher.id" name="id" required minlength="0">
     
     <label for="name">Name:</label>
-    <input id="name" [(ngModel)]="teacher.name" name="name">
+    <input id="name" [(ngModel)]="teacher.name" name="name" required minlength="2">
 
     <label for="classes">Classes:</label>
-    <input id="classes" [(ngModel)]="teacher.classes" name="classes">
+    <input id="classes" [(ngModel)]="teacher.classes" name="classes" required minlength="1">
 
-    <button type="submit">Add/Updatr Teacher</button>
+    <button [disabled]="myForm.invalid" type="submit">Add/Updatr Teacher</button>
 </form>
 
 <div style="font-weight: bolder;">

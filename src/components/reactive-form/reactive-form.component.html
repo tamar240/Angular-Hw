@@ -1,0 +1,21 @@
+<form [formGroup]="teacherForm" (ngSubmit)="onSubmit()">
+    <label for="id">id:</label>
+    <input id="id" type="number" formControlName="id">
+    
+    <label for="name">Name:</label>
+    <input id="name" type="text" formControlName="name">
+
+    <label for="classes">Classes:</label>
+    <input id="classes" formControlName="classes">
+
+    <button  type="submit" [disabled]="teacherForm.invalid">Add Teacher</button>
+</form>
+
+<div style="font-weight: bolder;">
+    teachers list:</div>
+    <div style="border: 2px solid rgb(237, 140, 172); width: fit-content; padding: 5px;">
+@for (t of this.teachers; track t) {
+    {{t.id}}  {{t.name}}  {{t.classes}}
+    <div></div>
+}
+</div>

@@ -1,20 +1,29 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { StudentListComponent } from '../components/student-list/student-list.component';
 import { CoursesListComponent } from "../components/courses-list/courses-list.component";
 import { TemplateDrivenFormsComponent } from "../components/template-driven-forms/template-driven-forms.component";
 import { IconsPipesPipe } from '../pipes/icons-pipes.pipe';
-
+import {ReactiveFormsModule} from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
   // RouterOutlet
-  imports: [StudentListComponent, StudentListComponent, CoursesListComponent, TemplateDrivenFormsComponent,IconsPipesPipe],
+  imports: [
+    // StudentListComponent,
+    //  StudentListComponent,
+    //   CoursesListComponent, 
+    //   TemplateDrivenFormsComponent,
+    //   IconsPipesPipe,
+      RouterLinkActive,
+      RouterOutlet, 
+      RouterLink, 
+   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
+  public word: string='';
   title = 'tamar vurzel';
   goodWord() {
     let hour = new Date().getHours();
