@@ -14,3 +14,4 @@ export class Course {
         public subject: SubjectType,
     ) { }
 }
+

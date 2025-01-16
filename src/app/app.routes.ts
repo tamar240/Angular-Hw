@@ -5,6 +5,8 @@ import { StudentDetailesComponent } from '../components/student-detailes/student
 import { StudentListComponent } from '../components/student-list/student-list.component';
 import { TemplateDrivenFormsComponent } from '../components/template-driven-forms/template-driven-forms.component';
 import { ReactiveFormComponent } from '../components/reactive-form/reactive-form.component';
+import { ShowSilabusComponent } from '../components/show-silabus/show-silabus.component';
+import { ShowClientComponent } from '../components/show-client/show-client/show-client.component';
 
 export const routes: Routes = [
     {path: 'add-student', component:AddStudentComponent},
@@ -13,4 +15,6 @@ export const routes: Routes = [
     {path: 'student-list', component:StudentListComponent},
     {path: 'driven-form', component:TemplateDrivenFormsComponent},
     {path:'reactive-form', component:ReactiveFormComponent},
+    {path:'courses-silabus', component:ShowSilabusComponent},
+    {path:'show-client', component:ShowClientComponent},
 ];
